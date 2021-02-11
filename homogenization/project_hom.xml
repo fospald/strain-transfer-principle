@@ -1,0 +1,53 @@
+<settings>
+
+	<title>SFRP homogenization</title>
+	<description>Homogenization for fibers of infinite length for variable volume fraction.</description>
+
+	<num_threads>16</num_threads>
+
+	<variables>
+		<res type="int" value="780" />
+		<R type="float" value="0.5" />
+		<dx type="float" value="3**0.5" />
+		<cz type="float" value="0.5/res" />
+	</variables>
+
+	<dx>dx</dx>
+	<dy>1</dy>
+	<dz>1.0/res</dz>
+
+	<periodic>0</periodic>
+	<planar z="1" />
+
+	<solver nx="int(dx*res+0.5)" ny="res" nz="1">
+		
+		<materials>
+			<matrix law="iso" E="1.665" nu="0.36" />
+			<fiber  law="iso" E="73.0" nu="0.18" />
+		</materials>
+
+		<method>cg</method>
+		<mode>elasticity</mode>
+		<mixing_rule>laminate</mixing_rule>
+
+		<tol>1e-4</tol>
+
+	</solver>
+
+	<actions>
+
+		<select_material name="fiber"/>
+
+		<!-- create dense hexagonal packing -->
+		<place_fiber R="R" cx="0.0"    cy="0.0"  cz="cz" ax="0" ay="0" az="1" L="2" />
+		<place_fiber R="R" cx="0.0"    cy="1"    cz="cz" ax="0" ay="0" az="1" L="2" />
+		<place_fiber R="R" cx="0.5*dx" cy="-0.5" cz="cz" ax="0" ay="0" az="1" L="2" />
+		<place_fiber R="R" cx="0.5*dx" cy="0.5"  cz="cz" ax="0" ay="0" az="1" L="2" />
+		<place_fiber R="R" cx="dx"     cy="0.0"  cz="cz" ax="0" ay="0" az="1" L="2" />
+		<place_fiber R="R" cx="dx"     cy="1"    cz="cz" ax="0" ay="0" az="1" L="2" />
+
+		<calc_effective_properties />
+
+	</actions>
+
+</settings>

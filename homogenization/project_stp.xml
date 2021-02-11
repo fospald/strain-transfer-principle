@@ -1,0 +1,46 @@
+<settings>
+
+	<title>Strain Transfer Principle</title>
+	<description>Project for computing the strain transfer matrix.</description>
+
+	<num_threads>1</num_threads>
+
+	<variables>
+		<res type="int" value="512" />
+		<R type="float" value="0.025" />
+		<cz type="float" value="0.5/res" />
+	</variables>
+
+	<dx>1</dx>
+	<dy>1</dy>
+	<dz>1.0/res</dz>
+
+	<periodic>0</periodic>
+	<planar z="1" />
+
+	<solver nx="res" ny="res" nz="1">
+		
+		<materials>
+			<matrix law="general" />
+			<fiber  law="iso" E="73.1" nu="0.16" />
+		</materials>
+
+		<method>cg</method>
+		<mode>elasticity</mode>
+		<mixing_rule>laminate</mixing_rule>
+
+		<tol>1e-6</tol>
+
+	</solver>
+
+	<actions>
+
+		<select_material name="fiber"/>
+
+		<place_fiber R="R" cx="0.5" cy="0.5"  cz="cz" ax="0" ay="0" az="1" L="2" />
+
+		<run_load_case />
+
+	</actions>
+
+</settings>

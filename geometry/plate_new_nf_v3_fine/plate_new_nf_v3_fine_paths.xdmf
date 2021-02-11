@@ -1,0 +1,16 @@
+<Xdmf Version="3.0">
+  <Domain>
+    <Grid Name="Grid">
+      <Information Name="Information" Value="0"><![CDATA[<main/>]]></Information>
+      <Geometry GeometryType="XYZ">
+        <DataItem DataType="Float" Dimensions="161476 3" Format="HDF" Precision="8">plate_new_nf_v3_fine_paths.h5:/data0</DataItem>
+      </Geometry>
+      <Topology TopologyType="Polyline" NumberOfElements="169">
+        <DataItem DataType="Int" Dimensions="169 2" Format="HDF" Precision="8">plate_new_nf_v3_fine_paths.h5:/data1</DataItem>
+      </Topology>
+      <Attribute Name="ids" AttributeType="Scalar" Center="Cell">
+        <DataItem DataType="Int" Dimensions="169" Format="HDF" Precision="8">plate_new_nf_v3_fine_paths.h5:/data2</DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>
