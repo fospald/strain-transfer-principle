@@ -46,5 +46,6 @@ The result file contains the following columns:
 - 22-28: enf11, enf22, enf33, enf23, enf13, enf12: no-fiber solution strain at the edge center point
 - 29-34: er11, er22, er33, er23, er13, er12: reference solution strain at the edge center point
 - 35-40: eTnf11, eTnf22, eTnf33, eTnf23, eTnf13, eTnf12: strain computed using classical strain-transfer principle for the no-fiber solution at the edge center point
+
 The arc-length parameter and the strain components are the basis for the plots in the publication.
 
