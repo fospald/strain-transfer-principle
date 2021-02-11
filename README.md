@@ -33,18 +33,18 @@ should create the result table `results/plate_new_nf_v3_fine_results_fiber_f_50_
 ## Contents of the result CSV file
 
 The result file contains the following columns:
-1. i: the point index along the sensor fiber center
-2. ei: the element index corresponding to the point in the mesh
-3. s: the acr-length parameter of the curve corrsponding to the point
-4. iv1: the first vertex index in the mesh for the edge containing the point
-5. iv2: the second vertex index in the mesh for the edge containing the point
-6-8: dx,dy,dz: the normalized direction of the edge (v2-v1)
-9-11: umx, umy, umz: average nodal displacement of the edge (u1+u2)/2
-12-14: dux, duy, duz: difference between nodal displacements (u2-u1)
-15: ed: displacement in direction d (scalar product (du, d))
-16-21: ef11, ef22, ef33, ef23, ef13, ef12: strain computed using the extended strain-transfer priciple at the edge center point
-22-28: enf11, enf22, enf33, enf23, enf13, enf12: no-fiber solution strain at the edge center point
-29-34: er11, er22, er33, er23, er13, er12: reference solution strain at the edge center point
-35-40: eTnf11, eTnf22, eTnf33, eTnf23, eTnf13, eTnf12: strain computed using classical strain-transfer principle for the no-fiber solution at the edge center point
+- 1. i: the point index along the sensor fiber center
+- 2. ei: the element index corresponding to the point in the mesh
+- 3. s: the acr-length parameter of the curve corrsponding to the point
+- 4. iv1: the first vertex index in the mesh for the edge containing the point
+- 5. iv2: the second vertex index in the mesh for the edge containing the point
+- 6-8: dx,dy,dz: the normalized direction of the edge (v2-v1)
+- 9-11: umx, umy, umz: average nodal displacement of the edge (u1+u2)/2
+- 12-14: dux, duy, duz: difference between nodal displacements (u2-u1)
+- 15: ed: displacement in direction d (scalar product (du, d))
+- 16-21: ef11, ef22, ef33, ef23, ef13, ef12: strain computed using the extended strain-transfer priciple at the edge center point
+- 22-28: enf11, enf22, enf33, enf23, enf13, enf12: no-fiber solution strain at the edge center point
+- 29-34: er11, er22, er33, er23, er13, er12: reference solution strain at the edge center point
+- 35-40: eTnf11, eTnf22, eTnf33, eTnf23, eTnf13, eTnf12: strain computed using classical strain-transfer principle for the no-fiber solution at the edge center point
 The arc-length parameter and the strain components are the basis for the plots in the publication.
 
