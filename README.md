@@ -33,11 +33,11 @@ should create the result table `results/plate_new_nf_v3_fine_results_fiber_f_50_
 ## Contents of the result CSV file
 
 The result file contains the following columns:
-- 1. i: the point index along the sensor fiber center
-- 2. ei: the element index corresponding to the point in the mesh
-- 3. s: the acr-length parameter of the curve corrsponding to the point
-- 4. iv1: the first vertex index in the mesh for the edge containing the point
-- 5. iv2: the second vertex index in the mesh for the edge containing the point
+- 1: i: the point index along the sensor fiber center
+- 2: ei: the element index corresponding to the point in the mesh
+- 3: s: the acr-length parameter of the curve corrsponding to the point
+- 4: iv1: the first vertex index in the mesh for the edge containing the point
+- 5: iv2: the second vertex index in the mesh for the edge containing the point
 - 6-8: dx,dy,dz: the normalized direction of the edge (v2-v1)
 - 9-11: umx, umy, umz: average nodal displacement of the edge (u1+u2)/2
 - 12-14: dux, duy, duz: difference between nodal displacements (u2-u1)
